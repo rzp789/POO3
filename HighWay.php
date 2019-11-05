@@ -2,7 +2,7 @@
 
 abstract class HighWay{
 
-        protected $currentVehicles;
+        protected $currentVehicles = [];
         /**
          * @var int
          */

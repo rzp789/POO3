@@ -11,7 +11,7 @@ final class MotorWay extends Highway {
     public function addvehicles(Vehicle $currentVehicles)
     {
         if ($currentVehicles instanceof Truck or $currentVehicles instanceof Car)
-        $currentVehicles = $this->currentVehicles;
+        $this->currentVehicles[] = $currentVehicles;
     }
 
 }
@@ -25,7 +25,7 @@ final class PedestrianWay extends Highway {
     public function addvehicles(Vehicle $currentVehicles)
     {
         if ($currentVehicles instanceof Vehicle)
-            $currentVehicles = $this->currentVehicles;
+            $this->currentVehicles[] = $currentVehicles;
     }
 
 
@@ -40,7 +40,7 @@ final class ResidentialWay extends Highway {
     public function addvehicles(Vehicle $currentVehicles)
     {
         if ($currentVehicles instanceof Bicycle)
-            $currentVehicles = $this->currentVehicles;
+            $this->currentVehicles[] = $currentVehicles;
 
     }
 }
